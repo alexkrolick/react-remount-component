@@ -31,9 +31,12 @@ Currently, the HOC generates a random key for the wrapped component when a reset
 
 ## Usage
 
-### Class Component
-
 _**See [usage.test.js](./usage.test.js)**_
+
+- [Class Component](#class-component)
+- [Function Component with Hooks](#function-component)
+
+### Class Component
 
 ```jsx
 class UserCard extends React.Component {

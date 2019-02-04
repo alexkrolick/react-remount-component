@@ -4,7 +4,7 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Problem](#the-problem)
+- [The Problem](#the-problem)
 - [This Solution](#this-solution)
 - [Usage](#usage)
   - [Class Component](#class-component)

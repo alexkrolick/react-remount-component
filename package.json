@@ -1,0 +1,47 @@
+{
+  "name": "react-remount-component",
+  "version": "1.0.0",
+  "author": "Alex Krolick <alexander.krolick@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "scripts": {
+    "format:js": "eslint --fix \"*.js\"",
+    "format:md:pretty": "prettier --write --parser=markdown \"*.md\"",
+    "format:md:toc": "doctoc --github README.md",
+    "lint": "eslint \"*.js\"",
+    "build:es": "BABEL_ENV=production BUILD=es babel ./index.js -d dist/es",
+    "build:cjs": "BABEL_ENV=production BUILD=cjs babel ./index.js -d dist/cjs",
+    "build": "npm-run-all build:*",
+    "prepublishOnly": "npm-run-all format:md:* lint test build",
+    "test": "jest --coverage"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-react-app": "^7.0.0",
+    "doctoc": "^1.4.0",
+    "eslint": "^5.13.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react-app": "^3.0.6",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.0.0",
+    "jest-dom": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.16.4",
+    "react": "16.8.0-alpha.1",
+    "react-dom": "16.8.0-alpha.1",
+    "react-testing-library": "^5.4.4"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}
